@@ -42,17 +42,32 @@ Create a factory function called makeComputer that represents computers,
 What different attributes computers may have? 
 Create two computers object from your factory function and save them in one array called computers!
 
-Note: please write one or two lines here describing your solution.
+Note: i create an array that content : 2 object that descripe two computers
 */
 
 function makeComputer(type, color, weight) {
-  // TODO: Your code here
+  computers = [
+  computer : {
+    type : "HP",
+    color: "white",
+    weight: "1,5 kg"
+
+  }
+  computer : {
+    type : "dell",
+    color: "black",
+    weight: "2,7 kg"
+  }
+
+  ]
+  return computers.computer;
 }
 
 // Write a function displayComputer that can be used to display one computer.
 
 function displayComputer(computer) {
   // TODO: Your code here
+  return makeComputer;
 }
 
 //=============================================================================
@@ -66,7 +81,7 @@ and returns an array of all of those strings, but transformed to upper case.
 You can use toUpperCase method to convert a string to upper case. 
 Solve it using the most appropriate helper functions(each,map,filter).
 
-Note: please write one or two lines here describing your solution.
+Note: i used the each function to looping the array and i check it if the value of each index (string) is lowcase i change it to uppercase and put it into a new array
 
 var strArr = ['hello', 'world', 'whirled', 'peas'];
 uppercaseAll(strArr); ==> [ 'HELLO', 'WORLD', 'WHIRLED', 'PEAS' ]
@@ -74,6 +89,14 @@ uppercaseAll(strArr); ==> [ 'HELLO', 'WORLD', 'WHIRLED', 'PEAS' ]
 
 function uppercaseAll(arrayOfStrings) {
   // TODO: your code here
+  var arr = [];
+  var j = 0;
+  return each(coll, function(array,i){
+    if (array.match([/[a-z]/)){
+    	arr[j] = array.toUpperCase();
+    	j++;
+    }
+  })
 }
 
 //=============================================================================
@@ -113,6 +136,15 @@ var data = [
 
 function highestPopulation(arrayOfObjects) {
   // TODO: your code here
+  var arr = [];
+  var j = 0;
+  return each(array,function(array,i){
+  	if (key.population > 500000000){
+  		arr[j] = key ;
+  		j++;
+  	}
+  })
+  return arr;
 }
 
 //=============================================================================
@@ -128,11 +160,19 @@ Note: solve it using the most appropriate helper functions(each,map,filter)
 var numsArray = [2, 6, 20, 8, 14];
 halveAll(numsArray); ==> [ 1, 3, 10, 4, 7 ]
 
-Note: please write one or two lines here describing your solution.
+Note: i used each to iterate the array and divided the value by 2 and put it into another array
 */
 
 function halveAll(numbers) {
   // your code is here
+  var arr = [];
+  var j = 0;
+  return each(array,function(array,i){
+   arr[j] = array / 2 ;
+   j++;
+
+  })
+  return arr;
 }
 
 //=============================================================================
@@ -149,6 +189,12 @@ Note: please write one or two lines here describing your solution.
 */
 function values(obj) {
   // TODO: your code here
+  var arr = [];
+  var j = 0;
+  return each(array,function(array,key){
+  	arr[j] = key;
+  })
+  return arr;
 }
 
 //Good Luck :))
