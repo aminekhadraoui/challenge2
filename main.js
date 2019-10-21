@@ -8,7 +8,7 @@ function each(coll, f) {
     for (var key in coll) {
       f(coll[key], key);
     }
-  }
+   }
 }
 
 function filter(array, predicate) {
